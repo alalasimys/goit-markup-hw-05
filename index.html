@@ -24,13 +24,17 @@
           </a>
           <ul class="navigation list">
             <li class="item">
-              <a class="link" href="./index.html">Студия</a>
+              <a class="link navigation-link current" href="./index.html"
+                >Студия</a
+              >
             </li>
             <li class="item">
-              <a class="link" href="./portfolio.html">Портфолио</a>
+              <a class="link navigation-link" href="./portfolio.html"
+                >Портфолио</a
+              >
             </li>
             <li class="item">
-              <a class="link" href="">Контакты</a>
+              <a class="link navigation-link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -60,7 +64,16 @@
       <section class="hero">
         <div class="">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <a class="hero-button link" href="">Заказать услугу </a>
+          <button class="hero-button link" type="button" data-modal-open>
+            Заказать услугу
+          </button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button type="button" class="close-modal" data-modal-close>
+                <img src="./images/close-button.svg" alt="Закрыть окно" />
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       <!--Benefits-->
@@ -104,34 +117,37 @@
         <div class="container">
           <h2 class="work-title">Чем мы занимаемся</h2>
           <ul class="list work-list">
-            <li class="item">
-              <a href="">
+            <li class="item work-item">
+              <a class="link" href="">
                 <img
                   src="./images/code.jpg"
                   alt="Фото как мы пишем код"
                   width="370"
                   height="294"
                 />
+                <p class="work-description">Десктопные приложения</p>
               </a>
             </li>
-            <li class="item">
-              <a href="">
+            <li class="item work-item">
+              <a class="link" href="">
                 <img
                   src="./images/mobile.jpg"
                   alt="Фото как пишем на мобильный устройства"
                   width="370"
                   height="294"
                 />
+                <p class="work-description">Мобильные приложения</p>
               </a>
             </li>
-            <li class="item">
-              <a href="">
+            <li class="item work-item">
+              <a class="link" href="">
                 <img
                   src="./images/grafic.jpg"
                   alt="Фото нашей графики"
                   width="370"
                   height="294"
                 />
+                <p class="work-description">Дизайнерские решения</p>
               </a>
             </li>
           </ul>
@@ -459,7 +475,7 @@
     <!--Footer-->
     <footer>
       <div class="container flex">
-        <div class="footer-wrap">
+        <div class="footer-wrap" id="contacts">
           <a class="link logo footer-logo" href="/">
             <span class="logo-color">Web</span>Studio
           </a>
@@ -537,5 +553,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
